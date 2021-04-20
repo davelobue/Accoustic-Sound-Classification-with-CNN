@@ -1,1 +1,5 @@
 # Accoustic-Sound-Classification-with-CNN
+
+This project takes auditory waveform data from 11 instruments sourced from 5 genres as .wav input files and converts the auditory data to spectrogram images in order to perform instrument classification using several deep learning methods.  Input .wav data is processed by downsampling to 22k Hz and applying a Fast Fourier Transform (FFT) window of 2,048 samples with 512 hop length prior to converting into Mel-scaled spectrograms with 128 Mel filter banks.  Power spectrograms are converted to logarithmic scale with several image augmentation processes applied to optimize classification accuracy.  
+
+After data preprocessing, multiple deep learning classification models were run in order to identify optimal classification by instrument based on method.  Among the models compared are: a 3 layer Convolutional Neural Network (with and without image augmentation), Neural Network with unsupervised pre-training using Bernoulli Restricted Boltzmann Machine (RBM), and an Inception Network using 3 distinct convolutional layers based on the GoogLeNet team architecture. 
